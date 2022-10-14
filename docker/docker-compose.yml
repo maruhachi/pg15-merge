@@ -6,11 +6,11 @@ services:
       dockerfile: ./Dockerfile
       args:
         - DB_LANG=ja_JP
-    container_name: "flatto-db"
+    container_name: "pg15-db"
     environment:
-      - POSTGRES_USER=flatto
-      - POSTGRES_PASSWORD=flatto
-      - POSTGRES_DB=flatto
+      - POSTGRES_USER=suburi
+      - POSTGRES_PASSWORD=suburi
+      - POSTGRES_DB=suburi
       - TZ="Asia/Tokyo"
     ports:
       - "15432:5432"
