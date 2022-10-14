@@ -1,0 +1,18 @@
+version: "3"
+services:
+  appdb:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - DB_LANG=ja_JP
+    container_name: "flatto-db"
+    environment:
+      - POSTGRES_USER=flatto
+      - POSTGRES_PASSWORD=flatto
+      - POSTGRES_DB=flatto
+      - TZ="Asia/Tokyo"
+    ports:
+      - "15432:5432"
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d
