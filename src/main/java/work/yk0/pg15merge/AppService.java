@@ -12,9 +12,9 @@ public class AppService {
     TraditionalRepository traditionalApp;
 
     @Autowired
-    NewfeatureApp newfeatureApp;
+    NewfeatureRepository newfeatureRepository;
 
-    private final int paramId = 4;
+    private final int paramId = 1;
 
     private final int paramScore = 111;
 
@@ -31,7 +31,7 @@ public class AppService {
 
     @Transactional
     public void execNewfeature() {
-        newfeatureApp.exec(paramId, paramScore);
+        newfeatureRepository.exec(paramId, paramScore);
     }
 
 }

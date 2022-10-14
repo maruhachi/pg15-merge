@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface NewfeatureApp extends JpaRepository<Score, Integer> {
+public interface NewfeatureRepository extends JpaRepository<Score, Integer> {
 
     @Modifying
     @Query(value="""
